@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML Autocomplete Form</title>
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<style type="text/css">
+		body{
+			background: aliceblue;
+		}
+	</style>
+</head>
+<body class="container mt-4">
+	<h1 class="text-center">HTML Autocomplete Form</h1>
+	<form method="GET" class="form-group">
+		
+		<input class="language" type="text" placeholder="Choose your Fav Programming language" list="lang">
+
+		<datalist id="lang">
+			<option value="Python">Python</option>
+			<option value="C">C</option>
+			<option value="Java">Java</option>
+			<option value="Vue">Vue</option>
+			<option value="Angular">Angular</option>
+			<option value="Django">Django</option>
+		</datalist>
+
+
+		<button type="submit" onclick="selectedLang()" class="btn btn-primary btn-sm">Submit</button>
+
+		
+	</form>
+
+	<script type="text/javascript">
+		
+		function selectedLang() {
+			var selected = document.querySelector(".language").value;
+			alert(`You selected ${selected} language !`)
+		}
+
+	</script>
+
+</body>
+</html>
