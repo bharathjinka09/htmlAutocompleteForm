@@ -16,7 +16,7 @@
 	<h1 class="text-center">HTML Autocomplete Form</h1>
 	<form method="GET" class="form-group">
 		
-		<input class="language" type="text" placeholder="Choose your Fav Programming language" list="lang">
+		<input class="language form-control" type="text" placeholder="Choose your Fav Programming language" list="lang">
 
 		<datalist id="lang">
 			<option value="Python">Python</option>
@@ -26,6 +26,8 @@
 			<option value="Angular">Angular</option>
 			<option value="Django">Django</option>
 		</datalist>
+
+		<br>
 
 
 		<button type="submit" onclick="selectedLang()" class="btn btn-primary btn-sm">Submit</button>
@@ -37,7 +39,15 @@
 		
 		function selectedLang() {
 			var selected = document.querySelector(".language").value;
-			alert(`You selected ${selected} language !`)
+
+			if(selected){
+
+				alert(`You selected ${selected} language !`)
+			} else{
+				alert(`Please select a language !`)
+
+			}
+
 		}
 
 	</script>
