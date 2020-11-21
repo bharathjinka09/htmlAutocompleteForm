@@ -19,12 +19,12 @@
 		<input class="language form-control" type="text" placeholder="Choose your Fav Programming language" list="lang">
 
 		<datalist id="lang">
-			<option value="Python">Python</option>
+			<!-- <option value="Python">Python</option>
 			<option value="C">C</option>
 			<option value="Java">Java</option>
 			<option value="Vue">Vue</option>
 			<option value="Angular">Angular</option>
-			<option value="Django">Django</option>
+			<option value="Django">Django</option> -->
 		</datalist>
 
 		<br>
@@ -37,6 +37,16 @@
 
 	<script type="text/javascript">
 		
+		languagesList = ["Python","Angular","Vue","Java","C","React","Django"];
+
+		for (var i = 0; i < languagesList.length; i++){
+		  var item = languagesList[i];
+		  var element = document.createElement("option");
+		  element.innerText = item;
+		  var selectElem = document.getElementById("lang");
+		  selectElem.append(element);
+		}
+
 		function selectedLang() {
 			var selected = document.querySelector(".language").value;
 
